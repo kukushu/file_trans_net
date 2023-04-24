@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
   struct sockaddr_in sockAddr;
   memset(&sockAddr, 0, sizeof(sockAddr));
   sockAddr.sin_family = PF_INET;
-  sockAddr.sin_addr.s_addr = inet_addr(INADDR_ANY);
+  sockAddr.sin_addr.s_addr = htonl(INADDR_ANY);
   sockAddr.sin_port = htons(1234);
   if (bind(servSock, (struct sockaddr *)&sockAddr, sizeof(sockAddr)) == -1)
     return -1;
