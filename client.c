@@ -5,7 +5,7 @@
 #include <sys/socket.h>
 #include <unistd.h>
 #define BUF_SIZE 1024
-int main() {
+int main(int argc, char *argv[]) {
   //先输入文件名，看文件是否能创建成功
   char filename[100] = {0}; //文件名
   printf("Input filename to save: ");
